@@ -68,6 +68,6 @@ import fs from "node:fs/promises"
 
   // log out
   console.clear()
-  console.table(res.rows, ['brand', 'model', 'year', 'price', 'color', 'condition', 'sold'])
+  console.table(res.rows)
 
 })()
