@@ -3,7 +3,7 @@ import { PGlite } from "@electric-sql/pglite";
 import fs from "node:fs/promises"
 
 (async () => {
-  const db = new PGlite
+  const db = new PGlite()
   await  db.exec(
     `CREATE TABLE IF NOT EXISTS cars (
             id SERIAL PRIMARY KEY,
@@ -17,7 +17,7 @@ import fs from "node:fs/promises"
         );
         INSERT INTO cars (brand, model, year, price, color, condition, sold
         ) VALUES 
-          ('Ford', 'Mustang', 1965, 45000, 'white', 4, false),
+          ('Rand', 'Mustang', 1965, 45000, 'white', 4, false),
           ('Chevrolet', 'Camaro', 1970, 48000, 'red', 2, false),
           ('Dodge', 'Charger', 1969, 58000, 'black', 4, true),
           ('Porsche', '911', 1985, 85000, 'silver', 5, false),
@@ -61,7 +61,7 @@ import fs from "node:fs/promises"
           ('Bentley', 'T2', 1978, 52000, 'silver', 4, false);`
   )
   // load the query file
-  const query = await fs.readFile("query.sql")
+  const query = await fs.readFile("query.sql", "utf-8")
 
   // exec query
   const res =  await db.query(query)
