@@ -1,0 +1,23 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "learning databases",
+  "homepage": "https://github.com/aksbrar/databses#readme",
+  "bugs": {
+    "url": "https://github.com/aksbrar/databses/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksbrar/databses.git"
+  },
+  "license": "ISC",
+  "author": "aks",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.6"
+  }
+}
